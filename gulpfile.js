@@ -12,8 +12,8 @@ const webpackConfig = require("./webpack.config.js");
 
 const paths = {
   scripts: {
-    src: "src/js/index.js",
-    watch: "src/js/**/*.js",
+    src: "src/index.js",
+    watch: "src/**/*.js",
   },
   styles: {
     src: "src/scss/main.scss",

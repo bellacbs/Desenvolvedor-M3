@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require('webpack');
 
 module.exports = (paths) => ({
   entry: {
@@ -14,7 +15,7 @@ module.exports = (paths) => ({
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
-        include: path.resolve(__dirname, paths.scripts.src),
+        // include: path.resolve(__dirname, paths.scripts.src),
         use: {
           loader: "babel-loader",
           options: {
@@ -30,4 +31,8 @@ module.exports = (paths) => ({
       },
     ],
   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 });
