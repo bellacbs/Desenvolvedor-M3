@@ -61,18 +61,6 @@ section{
     font-size: 12px;
 }
 
-[data-checkbox]:before {
-    border: var(--border-size-l) solid var(--color-neutral-0);
-    border-width: 0 0 2px 2px;
-    display: table-cell;
-    background: #000;
-    color: white;
-    content: "\f068";
-    font-family: FontAwesome;
-    text-align: center;
-    vertical-align: middle;
-}
-
 
 //Carts
 #products-container{
