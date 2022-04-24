@@ -1,35 +1,49 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import CardProducts from '../components/products/CardProducts';
-// import useRequestData from '../Hooks/useRequestData';
 import Filter from '../components/filter/Filter';
 import OrderBy from '../components/filter/OrderBy';
 import Products from '../components/products/Products';
+import { base_url } from '../constants/base_url'
+import { getData } from '../services/getData'
+import { colorsFilter } from '../constants/colorsFilter';
 
 const Main = () => {
-    // const [data] = useRequestData()
     const [data, setData] = useState([])
+    const [color, setColors] = useState([])
+    const [size, setSize] = useState([])
+    const [price, setPrice] = useState([])
+    const [order, setOrder] = useState("")
 
+    console.log("main", color)
 
 
     useEffect(() => {
-        axios.get("http://localhost:5000/products")
-            .then((response) => {
-                setData(response.data)
-            })
-            .catch((error) => {
-                console.log(error.response)
-            })
+        getData(setData)
     }, [])
+
+    // useEffect(() => {
+    //     setColors(colorsFilter)
+    // }, [colorsFilter])
 
 
     return (
         <main>
-            <OrderBy/>
+            <OrderBy setOrder={setOrder} />
             <section>
-            <Filter/>
-            <Products data={data}/>
+                <Filter
+                    color={color}
+                    setColors={setColors}
+                    setSize={setSize}
+                    setPrice={setPrice}
+                />
+                <Products
+                    color={color}
+                    size={size}
+                    price={price}
+                    order={order}
+                    data={data}
+                />
             </section>
         </main>
     )

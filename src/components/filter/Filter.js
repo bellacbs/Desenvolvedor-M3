@@ -3,13 +3,14 @@ import ColorFilter from './ColorsFilter';
 import PriceFilter from './PriceFilter';
 import SizeFilter from './SizeFilter';
 
-const Filter = () => {
+const Filter = ({color,setColors, setSize, setPrice, onClickHandleChecks}) => {
+    console.log("colorfilter", color)
 
     return(
         <div>
-            <ColorFilter/>
-            <SizeFilter/>
-            <PriceFilter/>
+            <ColorFilter color={color} setColors={setColors} onClickHandleChecks={onClickHandleChecks}/>
+            <SizeFilter setSize={setSize}/>
+            <PriceFilter setPrice={setPrice}/>
         </div>
     )
 

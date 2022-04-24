@@ -3,9 +3,9 @@ import { priceFilter } from '../../constants/priceFilter';
 
 const PriceFilter = () => {
 
-    const allPriceFilter = priceFilter.map((price) => {
+    const allPriceFilter = priceFilter.map((price, index) => {
         return (
-            <label class="checkbox-label">
+            <label key={index} class="checkbox-label">
                 <input
                     type="checkbox"
                 />

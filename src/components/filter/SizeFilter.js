@@ -3,9 +3,9 @@ import { sizeFilter } from '../../constants/sizeFilter';
 
 const SizeFilter = () => {
     
-    const allSizeFilter = sizeFilter.map((size) =>{
+    const allSizeFilter = sizeFilter.map((size, index) =>{
         return(
-            <label>
+            <label key={index}>
                 <input
                 type= "checkbox"
                 placeholder={`${size}`}
