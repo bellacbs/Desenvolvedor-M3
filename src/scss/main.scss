@@ -1,1 +1,132 @@
 @import "reset";
+$primary-color: #00C0EE;
+$light-gray-color: #C7C7C7;
+$dark-gray-color: #666666;
+$black-color: #000000;
+
+*{
+    font-family: sans-serif;
+}
+
+#app-container{
+    display: grid;
+    grid-template-rows: 70px 1fr 28px;
+}
+
+// Header
+header{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid $light-gray-color;
+}
+
+#img-logo{
+    width: 119px;
+    height: 30px;
+}
+
+#img-cart{
+    width: 17px;
+    height: 20px;
+}
+
+//Main
+
+#order-by-container{
+    display: flex;
+    padding: 10px 60px;
+    justify-content: space-between;
+}
+
+#shirt-title{
+    font-size: 32px;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 150px 1fr 100px;
+    padding: 10px;
+}
+
+//filter
+.checkbox-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+}
+
+.checkbox-label{
+    padding: 5px;
+    font-size: 12px;
+}
+
+[data-checkbox]:before {
+    border: var(--border-size-l) solid var(--color-neutral-0);
+    border-width: 0 0 2px 2px;
+    display: table-cell;
+    background: #000;
+    color: white;
+    content: "\f068";
+    font-family: FontAwesome;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+//Carts
+#products-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 195px;
+    height: 399px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.img-product{
+    width: 195px;
+    height: 293px;
+}
+
+.product-name{
+    margin: 10px 0 10px 0;
+}
+
+.product-price{
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.installment-purchases{
+    margin-bottom: 14px;
+    color: $dark-gray-color
+}
+
+.btn-by-products{
+    width: 100%;
+    background-color: $black-color;
+    color: #ffffff;
+    padding: 7px 49px 7px 49px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+//Footer
+footer{
+    background-color: $black-color;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    padding: 7px 0 7px 0;
+}

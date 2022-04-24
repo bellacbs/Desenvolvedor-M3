@@ -1,11 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import CardProducts from '../components/cardProducts/CardProducts';
+import CardProducts from '../components/products/CardProducts';
 // import useRequestData from '../Hooks/useRequestData';
 import Filter from '../components/filter/Filter';
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
+import OrderBy from '../components/filter/OrderBy';
+import Products from '../components/products/Products';
 
 const Main = () => {
     // const [data] = useRequestData()
@@ -24,23 +24,14 @@ const Main = () => {
     }, [])
 
 
-    console.log(data)
-
-    const products = data.length > 0 && data?.map((product, index) => {
-        return (
-            <div key={index}>
-                <CardProducts product={product} />
-            </div>
-        )
-    })
-
     return (
-        <div>
-            <Header />
-            <Filter />
-            {products}
-            <Footer />
-        </div>
+        <main>
+            <OrderBy/>
+            <section>
+            <Filter/>
+            <Products data={data}/>
+            </section>
+        </main>
     )
 
 }

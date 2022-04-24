@@ -1,9 +1,24 @@
 import React from 'react';
+import { colorsFilter } from '../../constants/colorsFilter';
 
 const ColorFilter = () => {
 
-    return(
-        <div>ColorFilter</div>
+    const allColorFilter = colorsFilter.map((color) => {
+        return (
+            <label class="checkbox-label">
+                <input
+                    type="checkbox"
+                />
+                {color}
+            </label>
+        )
+    })
+
+    return (
+        <div class="checkbox-container">
+            <p>CORES</p>
+            {allColorFilter}
+        </div>
     )
 
 }
