@@ -22,23 +22,32 @@ const Products = ({ color, sizes, prices, order, data }) => {
             return true
         }
 
+        let selected = false
+
         for(let i = 0; i <prices.length; i++){
             if(prices[i] === "de R$0 até R$50"){
-                return product.price >=0 && product.price <= 50
+                selected = product.price >=0 && product.price <= 50
             }
             if(prices[i] === "de R$51 até R$150"){
-                return product.price >=51 && product.price <= 150
+                selected = product.price >=51 && product.price <= 150
             }
             if(prices[i] === "de R$151 até R$300"){
-                return product.price >=151 && product.price <= 300
+                selected = product.price >=151 && product.price <= 300
             }
             if(prices[i] === "de R$301 até R$500"){
-                return product.price >=301 && product.price <= 500
+                selected = product.price >=301 && product.price <= 500
             }
             if(prices[i] === "a partir de R$ 500"){
-                return product.price >=500
+                selected = product.price >=500
+            }
+
+            if(selected === true){
+                break;
             }
         }
+
+        return selected
+
     }).map((product, index) => {
         return (
             <div key={index}>
