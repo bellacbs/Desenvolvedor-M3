@@ -1,15 +1,18 @@
 import React from 'react';
 import { priceFilter } from '../../constants/priceFilter';
+import { onClickHandleChecks } from '../../utils/onClickHandleChecks';
 
-const PriceFilter = () => {
+const PriceFilter = ({clicked, setClicked, prices, setPrices}) => {
 
     const allPriceFilter = priceFilter.map((price, index) => {
         return (
-            <label key={index} class="checkbox-label">
+            <label key={index} className="checkbox-label">
                 <input
                     type="checkbox"
+                    checked={price.isChecked}
+                    onChange = {() => onClickHandleChecks(prices, priceFilter,price, index, clicked, setClicked, setPrices )}
                 />
-                {price}
+                {price.name}
             </label>
         )
     })

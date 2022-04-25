@@ -1,7 +1,6 @@
 import React from 'react';
 
 const CardProducts = ({product}) => {
-    console.log(product)
 
     return(
         <div class="card-container">

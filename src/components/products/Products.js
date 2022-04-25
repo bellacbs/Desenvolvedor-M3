@@ -2,39 +2,41 @@ import React from "react";
 import { useEffect } from "react/cjs/react.production.min";
 import CardProducts from "./CardProducts";
 import { colorsFilter } from "../../constants/colorsFilter";
+import { priceFilter } from "../../constants/priceFilter";
 
-const Products = ({ color, size, price, order, data }) => {
+const Products = ({ color, sizes, prices, order, data }) => {
 
     console.log("colorFilter",colorsFilter)
 
     const products = data.length > 0 && data?.filter((product) => {
-        // const filter = 0
-        // for (let i = 0; i < colorsFilter.length; i++) {
-        //     if(!colorsFilter[i].isChecked){
-        //         filter++
-        //     }
-        // }
-
-        // if(filter === colorsFilter.length +1){
-        //     return true
-        // }
-
-        // for (let i = 0; i < colorsFilter.length; i++) {
-        //     if(colorsFilter[i].isChecked){
-        //         return true
-        //     }
-        // }
-
-
-
         if (color.length === 0) {
             return true
         }
         for (let i = 0; i < color.length; i++) {
-            console.log(color[i])
-            console.log(product.color)
             if (color[i] === product.color) {
                 return true
+            }
+        }
+    }).filter((product) =>{
+        if(prices.length === 0){
+            return true
+        }
+
+        for(let i = 0; i <prices.length; i++){
+            if(prices[i] === "de R$0 até R$50"){
+                return product.price >=0 && product.price <= 50
+            }
+            if(prices[i] === "de R$51 até R$150"){
+                return product.price >=51 && product.price <= 150
+            }
+            if(prices[i] === "de R$151 até R$300"){
+                return product.price >=151 && product.price <= 300
+            }
+            if(prices[i] === "de R$301 até R$500"){
+                return product.price >=301 && product.price <= 500
+            }
+            if(prices[i] === "a partir de R$ 500"){
+                return product.price >=500
             }
         }
     }).map((product, index) => {

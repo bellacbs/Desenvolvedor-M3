@@ -1,22 +1,8 @@
 import React from 'react';
 import { colorsFilter } from '../../constants/colorsFilter';
+import { onClickHandleChecks } from '../../utils/onClickHandleChecks';
 
-const ColorFilter = ({color, setColors}) => {
-
-    console.log("ColorFilter", color)
-
-    const onClickHandleChecks = (colorFilter, index) => {
-        const newColor = color;
-        if(!colorFilter.isChecked){
-            colorsFilter[index].isChecked = true
-            newColor.push(colorFilter.name)
-        }else if(colorFilter.isChecked){
-            colorsFilter[index].isChecked = false
-            const indexToRemove = color.findIndex((element) => element === colorFilter.name)
-            newColor.splice(indexToRemove, 1)
-        }
-        setColors(newColor)
-    }
+const ColorFilter = ({clicked,setClicked, color, setColors}) => {
 
     const allColorFilter = colorsFilter.map((colorFilter, index) => {
         return (
@@ -24,7 +10,7 @@ const ColorFilter = ({color, setColors}) => {
                 <input
                     type="checkbox"
                     checked={colorFilter.isChecked}
-                    onChange={() => onClickHandleChecks(colorFilter, index)}
+                    onChange={() => onClickHandleChecks(color, colorsFilter, colorFilter, index, clicked, setClicked, setColors)}
                 />
                 {colorFilter.name}
             </label>
