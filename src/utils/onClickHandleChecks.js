@@ -8,8 +8,6 @@ export const onClickHandleChecks = (elementsAddFilter, elementStaticFilter, sele
             const indexToRemove = elementsAddFilter.findIndex((element) => element === selectedElement.name)
             newElementsAddFilter.splice(indexToRemove, 1)
         }
-
-        console.log(newElementsAddFilter)
         setClicked(!clicked)
         setElement(newElementsAddFilter)
 }

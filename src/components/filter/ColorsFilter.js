@@ -2,11 +2,11 @@ import React from 'react';
 import { colorsFilter } from '../../constants/colorsFilter';
 import { onClickHandleChecks } from '../../utils/onClickHandleChecks';
 
-const ColorFilter = ({clicked,setClicked, color, setColors}) => {
+const ColorFilter = ({ clicked, setClicked, color, setColors }) => {
 
     const allColorFilter = colorsFilter.map((colorFilter, index) => {
         return (
-            <label key={index} class="checkbox-label">
+            <label key={index} className="checkbox-label">
                 <input
                     type="checkbox"
                     checked={colorFilter.isChecked}

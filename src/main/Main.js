@@ -1,17 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import Filter from '../components/filter/Filter';
 import OrderBy from '../components/filter/OrderBy';
 import Products from '../components/products/Products';
-import { base_url } from '../constants/base_url'
 import { getData } from '../services/getData'
-import { colorsFilter } from '../constants/colorsFilter';
 
 const Main = () => {
     const [data, setData] = useState([])
     const [color, setColors] = useState([])
-    const [sizes, setSize] = useState([])
+    const [sizes, setSizes] = useState([])
     const [prices, setPrices] = useState([])
     const [order, setOrder] = useState("")
     const [clicked, setClicked] = useState(false)
@@ -23,7 +20,7 @@ const Main = () => {
 
     return (
         <main>
-            <OrderBy setOrder={setOrder} />
+            <OrderBy clicked={clicked} setClicked={setClicked} setOrder={setOrder} />
             <section>
                 <Filter
                     clicked={clicked}
@@ -31,11 +28,13 @@ const Main = () => {
                     color={color}
                     setColors={setColors}
                     sizes={sizes}
-                    setSize={setSize}
+                    setSizes={setSizes}
                     prices={prices}
                     setPrices={setPrices}
                 />
                 <Products
+                    clicked={clicked}
+                    setClicked={setClicked}
                     color={color}
                     sizes={sizes}
                     prices={prices}

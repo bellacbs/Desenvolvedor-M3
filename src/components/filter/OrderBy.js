@@ -1,17 +1,22 @@
 import React from "react";
 import { orderByFilter } from "../../constants/orderByFilter";
 
-const OrderBy = () => {
+const OrderBy = ({ clicked, setClicked, setOrder }) => {
 
-    const allOrderBy = orderByFilter.map((order, index) => {
+    const onClickHandleOrder = (event) => {
+        setOrder(event.target.value)
+        setClicked(!clicked)
+    }
+
+    const allOrderBy = orderByFilter.map((orderToSelected, index) => {
         return (
-            <option key={index} value={order}>{order}</option>
+            <option key={index} value={orderToSelected}>{orderToSelected}</option>
         )
     })
     return (
         <div id="order-by-container">
             <span id="shirt-title">Blusas</span>
-            <select>
+            <select name={'order'} onChange={onClickHandleOrder}>
                 {allOrderBy}
             </select>
         </div>
