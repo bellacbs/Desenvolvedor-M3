@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import CardProducts from "./CardProducts";
 import { interval } from "../../constants/priceFilter";
+import CarregarMais from "../carregarmais/CarregarMais";
 
 const Products = ({ clicked, setClicked, color, sizes, prices, order, data }) => {
+
+    const [load, setLoad] = useState(false)
+    const [quantityLoad, setQuantityLoad] = useState(8)
+
+    const onClickLoad = () => {
+        let sumQuantity = quantityLoad
+        sumQuantity = sumQuantity + 9
+        setQuantityLoad(sumQuantity)
+        setLoad(!load)
+    }
 
     const products = data.length > 0 && data?.filter((product) => {
         if (color.length === 0) {
@@ -54,17 +65,24 @@ const Products = ({ clicked, setClicked, color, sizes, prices, order, data }) =>
         return 0
 
     }).map((product, index) => {
-        return (
-            <div key={index}>
-                <CardProducts clicked={clicked} setClicked={setClicked} product={product} />
-            </div>
-        )
+
+        if (index <= quantityLoad) {
+            return (
+                <div key={index}>
+                    <CardProducts clicked={clicked} setClicked={setClicked} product={product} />
+                </div>
+            )
+        }
+
     })
 
 
     return (
-        <div id="products-container">
-            {products}
+        <div id="products-load-container">
+            <div id="products-container">
+                {products}
+            </div>
+            {data.length > 0 && quantityLoad < data.length && <button className="btn-load" onClick={onClickLoad}>CARREGAR MAIS</button>}
         </div>
     )
 }

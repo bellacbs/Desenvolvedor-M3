@@ -126,6 +126,14 @@ section{
 
 
 //Carts
+
+#products-load-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #products-container{
     display: flex;
     flex-direction: row;
@@ -170,6 +178,16 @@ section{
     padding: 7px 49px 7px 49px;
     font-size: 14px;
     font-weight: bold;
+}
+
+.btn-load{
+    color: #ffffff;
+    background-color: $primary-color;
+    align-self: center;
+    width: 175px;
+    height: 35px;
+    border: none;
+    margin-top: 20px;
 }
 
 
