@@ -20,7 +20,13 @@ const Main = () => {
 
     return (
         <main>
-            <OrderBy clicked={clicked} setClicked={setClicked} setOrder={setOrder} />
+            <div id="top-container">
+                <span id="shirt-title">Blusas</span>
+                <OrderBy
+                    clicked={clicked}
+                    setClicked={setClicked}
+                    setOrder={setOrder} />
+            </div>
             <section>
                 <Filter
                     clicked={clicked}

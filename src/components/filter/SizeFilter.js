@@ -1,26 +1,45 @@
 import React from 'react';
 import { sizeFilter } from '../../constants/sizeFilter';
-import { onClickHandleChecks } from '../../utils/onClickHandleChecks';
+import DeselectedSize from '../sizeButton/DeselectedSize';
+import SelectedSize from '../sizeButton/SelectedSize';
 
 const SizeFilter = ({ clicked, setClicked, sizes, setSizes }) => {
 
     const allSizeFilter = sizeFilter.map((size, index) => {
         return (
-            <label key={index} className="checkbox-label">
-                <input
-                    type="checkbox"
-                    checked={size.isCheked}
-                    onChange={() => onClickHandleChecks(sizes, sizeFilter, size, index, clicked, setClicked, setSizes)}
-                />
-                {size.name}
-            </label>
+            <div key={index}>
+                {
+                    size.isChecked ?
+                        <SelectedSize
+                            elementsAddFilter={sizes}
+                            elementStaticFilter={sizeFilter}
+                            selectedElement={size}
+                            index={index}
+                            clicked={clicked}
+                            setClicked={setClicked}
+                            setSizes={setSizes}
+                        /> :
+                        <DeselectedSize
+                            elementsAddFilter={sizes}
+                            elementStaticFilter={sizeFilter}
+                            selectedElement={size}
+                            index={index}
+                            clicked={clicked}
+                            setClicked={setClicked}
+                            setSizes={setSizes}
+                        />
+                }
+            </div>
+
         )
     })
 
     return (
         <div>
-            <p>TAMANHO</p>
-            {allSizeFilter}
+            <p>TAMANHOS</p>
+            <div className={"size-container"}>
+                {allSizeFilter}
+            </div >
         </div>
     )
 

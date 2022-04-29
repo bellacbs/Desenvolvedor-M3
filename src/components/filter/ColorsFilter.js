@@ -1,19 +1,34 @@
 import React from 'react';
 import { colorsFilter } from '../../constants/colorsFilter';
-import { onClickHandleChecks } from '../../utils/onClickHandleChecks';
+import EmptyBox from '../checks/EmptyBox';
+import FullBox from '../checks/FullBox';
 
 const ColorFilter = ({ clicked, setClicked, color, setColors }) => {
 
     const allColorFilter = colorsFilter.map((colorFilter, index) => {
         return (
-            <label key={index} className="checkbox-label">
-                <input
-                    type="checkbox"
-                    checked={colorFilter.isChecked}
-                    onChange={() => onClickHandleChecks(color, colorsFilter, colorFilter, index, clicked, setClicked, setColors)}
-                />
-                {colorFilter.name}
-            </label>
+            <div key={index} className="checkbox">
+                {colorFilter.isChecked ?
+                    <FullBox
+                        elementsAddFilter={color}
+                        elementStaticFilter={colorsFilter}
+                        selectedElement={colorFilter}
+                        index={index}
+                        clicked={clicked}
+                        setClicked={setClicked}
+                        setElement={setColors}
+                    /> :
+                    <EmptyBox
+                        elementsAddFilter={color}
+                        elementStaticFilter={colorsFilter}
+                        selectedElement={colorFilter}
+                        index={index}
+                        clicked={clicked}
+                        setClicked={setClicked}
+                        setElement={setColors}
+                    />}
+                <span>{colorFilter.name}</span>
+            </div>
         )
     })
 

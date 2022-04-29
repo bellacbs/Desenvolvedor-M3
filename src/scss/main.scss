@@ -31,9 +31,22 @@ header{
     height: 20px;
 }
 
+#number-cart{
+    background-color: $primary-color;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 10px;
+    margin-left: -5px;
+    text-align: center;
+    vertical-align: middle
+}
+
 //Main
 
-#order-by-container{
+#top-container{
     display: flex;
     padding: 10px 60px;
     justify-content: space-between;
@@ -45,7 +58,7 @@ header{
 
 section{
     display: grid;
-    grid-template-columns: 150px 1fr 100px;
+    grid-template-columns: 150px 1fr 70px;
     padding: 10px;
 }
 
@@ -56,9 +69,59 @@ section{
     margin: 10px 0 10px 0;
 }
 
-.checkbox-label{
+.checkbox{
     padding: 5px;
     font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.empty-box{
+    border: 1px solid $dark-gray-color;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+}
+
+.full-box{
+    width: 10px;
+    height: 10px;
+    background-color: $primary-color;
+    text-align: center;
+}
+
+.size-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.deselectedSize{
+    border: 1px solid $dark-gray-color;
+    width: 32px;
+    height: 32px;
+    margin: 2px;
+    color: $light-gray-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectedSize{
+    border: 1px solid $primary-color;
+    width: 32px;
+    height: 32px;
+    margin: 2px;
+    color: $black-color;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -68,6 +131,8 @@ section{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    align-self: start;
+
 }
 
 .card-container{
