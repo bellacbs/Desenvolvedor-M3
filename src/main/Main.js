@@ -20,34 +20,30 @@ const Main = () => {
 
     return (
         <main>
-            <div id="top-container">
-                <span id="shirt-title">Blusas</span>
-                <OrderBy
-                    clicked={clicked}
-                    setClicked={setClicked}
-                    setOrder={setOrder} />
-            </div>
-            <section>
-                <Filter
-                    clicked={clicked}
-                    setClicked={setClicked}
-                    color={color}
-                    setColors={setColors}
-                    sizes={sizes}
-                    setSizes={setSizes}
-                    prices={prices}
-                    setPrices={setPrices}
-                />
-                <Products
-                    clicked={clicked}
-                    setClicked={setClicked}
-                    color={color}
-                    sizes={sizes}
-                    prices={prices}
-                    order={order}
-                    data={data}
-                />
-            </section>
+            <span id="shirt-title">Blusas</span>
+            <OrderBy
+                clicked={clicked}
+                setClicked={setClicked}
+                setOrder={setOrder} />
+            <Filter
+                clicked={clicked}
+                setClicked={setClicked}
+                color={color}
+                setColors={setColors}
+                sizes={sizes}
+                setSizes={setSizes}
+                prices={prices}
+                setPrices={setPrices}
+            />
+            <Products
+                clicked={clicked}
+                setClicked={setClicked}
+                color={color}
+                sizes={sizes}
+                prices={prices}
+                order={order}
+                data={data}
+            />
         </main>
     )
 
