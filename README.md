@@ -5,6 +5,7 @@
   <a href="#sobre">Sobre</a> &#xa0; | &#xa0; 
   <a href="#tecnologias">Tecnologias e linguagens</a> &#xa0; | &#xa0; 
   <a href="#funciona">O que funciona</a> &#xa0; | &#xa0;
+  <a href="#nao-funciona">O que não funciona</a> &#xa0; | &#xa0;
   <a href="#pendente">Em Desenvolvimento</a> &#xa0; | &#xa0;
   <a href="#requisitos">Pré requisitos</a> &#xa0; | &#xa0;
   <a href="#observacoes">Observações</a> &#xa0; | &#xa0;
@@ -89,7 +90,6 @@ $http-server
 
 e abrir na porta indicada
 
->>>>>>> 978e3feab7ec05bbac52b4a474634965381f712e
 
 ```
 
