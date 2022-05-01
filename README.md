@@ -68,7 +68,6 @@ Caso utilize o Chrome, entrar no arquivo main.scss e salvar (ctrl + s)
 
 link do projeto [github.com/agenciam3/Desenvolvedor-M3](https://github.com/agenciam3/Desenvolvedor-M3)
 
-<h2 id="desenvolvedores">:construction_worker: Desenvolvedora</h2>
 
 <h2 id="desenvolvedores">:construction_worker: Desenvolvedora</h2>
 
