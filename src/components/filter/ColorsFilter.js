@@ -8,7 +8,6 @@ import onClickShowFilter from '../../utils/onClickShowFilter';
 
 const ColorFilter = ({ clicked, setClicked, color, setColors }) => {
     const [showColorFilter, setShowColorFilter] = useState(false)
-    const [showPriceFilter, setShowPriceFilter] = useState(false)
 
     const allColorFilter = colorsFilter.map((colorFilter, index) => {
         return (

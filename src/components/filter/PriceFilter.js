@@ -45,7 +45,7 @@ const PriceFilter = ({ clicked, setClicked, prices, setPrices }) => {
             </div>
             <div className="checkbox-container-mobile">
                 <div onClick={() => onClickShowFilter(showPriceFilter, setShowPriceFilter, clicked, setClicked)}>
-                    <span>FAIXA DE PREÇO{showPriceFilter ? <DownArrow /> : <UpArrow />}</span>
+                    <span className={"options-filter"}>FAIXA DE PREÇO{showPriceFilter ? <DownArrow /> : <UpArrow />}</span>
                 </div>
 
                 {showPriceFilter && <>{allPriceFilter}</>}

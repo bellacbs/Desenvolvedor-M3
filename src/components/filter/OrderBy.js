@@ -40,7 +40,7 @@ const OrderBy = ({ clicked, setClicked, setOrder }) => {
 
             <div id="order-by-mobile">
                 <div onClick={onClickShowOrderBy}>
-                    <span>Ordernar {showOrderBy && <span>X</span>}</span>
+                    <span className={"options-filter"} >Ordernar {showOrderBy && <span>X</span>}</span>
                 </div>
 
                 {showOrderBy && <>{allOrderByMobile}</>}

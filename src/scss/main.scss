@@ -121,6 +121,10 @@ main{
     flex-wrap: wrap;
 }
 
+.size-container-mobile{
+    display: none;
+}
+
 //OrderBy
 
 #order-by-mobile{
@@ -291,6 +295,12 @@ footer{
         flex-direction: column;
         margin: 10px 0 10px 0;
         z-index: 1;
+    }
+
+    .options-filter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     //filter-size

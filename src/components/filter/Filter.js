@@ -27,7 +27,7 @@ const Filter = ({ clicked, setClicked, color, setColors, sizes, setSizes, prices
             <div id={"filter-container-mobile"}>
 
                 <div onClick={() => onClickShowFilter(showFilter, setShowFilter, clicked, setClicked)}>
-                    <span>Filtrar {showFilter && <span>X</span>}</span>
+                    <span className={"options-filter"}>Filtrar {showFilter && <span>X</span>}</span>
                 </div>
                 {showFilter && <>
                     <ColorFilter clicked={clicked} setClicked={setClicked} color={color} setColors={setColors} />

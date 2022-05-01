@@ -1,12 +1,19 @@
-import axios from 'axios'
 import { base_url } from '../constants/base_url'
 
 export const getData = (setData) => {
-    axios.get(base_url)
+
+    fetch(base_url)
         .then((response) => {
-            setData(response.data)
+            if (response.ok) {
+                return response.json()
+            }
+            throw response
         })
-        .catch((error) => {
+        .then((data) => {
+            setData(data)
+        })
+        .catch(() => {
             alert("Ocorreu um erro, tente novamente")
         })
+
 }

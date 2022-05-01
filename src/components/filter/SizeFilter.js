@@ -21,7 +21,7 @@ const SizeFilter = ({ clicked, setClicked, sizes, setSizes }) => {
                             index={index}
                             clicked={clicked}
                             setClicked={setClicked}
-                            setSizes={setSizes}
+                            setElement={setSizes}
                         /> :
                         <DeselectedSize
                             elementsAddFilter={sizes}
@@ -30,7 +30,7 @@ const SizeFilter = ({ clicked, setClicked, sizes, setSizes }) => {
                             index={index}
                             clicked={clicked}
                             setClicked={setClicked}
-                            setSizes={setSizes}
+                            setElement={setSizes}
                         />
                 }
             </div>
@@ -47,8 +47,9 @@ const SizeFilter = ({ clicked, setClicked, sizes, setSizes }) => {
                 </div >
             </div>
             <div className="size-container-mobile">
-                <div onClick={() => onClickShowFilter(showSizeFilter, setShowSizeFilter, clicked, setClicked)}>
-                    <span>TAMANHO {showSizeFilter ? <DownArrow /> : <UpArrow />}</span>
+                <div className={"options-filter"} onClick={() => onClickShowFilter(showSizeFilter, setShowSizeFilter, clicked, setClicked)}>
+                    <span >TAMANHO</span>
+                    {showSizeFilter ? <DownArrow /> : <UpArrow />}
                 </div>
 
                 {showSizeFilter && <>{allSizeFilter}</>}
