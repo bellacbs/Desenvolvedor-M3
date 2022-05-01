@@ -61,7 +61,14 @@ $ npm run start
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 
 Caso utilize o Chrome, entrar no arquivo main.scss e salvar (ctrl + s)
+
 ```
+
+<h2 id="observacoes">:pencil: Observações</h2>
+
+link do projeto [github.com/agenciam3/Desenvolvedor-M3](https://github.com/agenciam3/Desenvolvedor-M3)
+
+<h2 id="desenvolvedores">:construction_worker: Desenvolvedora</h2>
 
 <h2 id="desenvolvedores">:construction_worker: Desenvolvedora</h2>
 
@@ -79,4 +86,3 @@ Caso utilize o Chrome, entrar no arquivo main.scss e salvar (ctrl + s)
 Email: izabellacbrandao@gmail.com
 
 <a href="#top">Voltar para o topo</a>
-**obs.**: link do projeto [github.com/agenciam3/Desenvolvedor-M3](https://github.com/agenciam3/Desenvolvedor-M3)
