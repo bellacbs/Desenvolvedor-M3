@@ -61,11 +61,23 @@ $ npm run start
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 
-Caso utilize o Chrome, entrar no arquivo main.scss e salvar (ctrl + s)
+Foi observado comportamento inesperado ao carregar arquivo css no Chrome, ligado à biblioteca browser-sync.
+Percebi que o erro não ocorre em outros navegadores e também quando se utiliza outras bibliotecas como http-server.
+Provavelmente, em resumo há uma incompatibilidade entre o chrome e o browser-sync nas versões das quais testei.
+
+<b>Caso utilize o Chrome, entrar no arquivo main.scss e salvar (ctrl + s)</b>
 
 ou
 
-instalar http-server global $npm install -g http-server e rodar com $http-server e rodar na porta indicada
+instalar http-server global
+
+$npm install -g http-server
+
+rodar com
+
+$http-server
+
+e abrir na porta indicada
 
 
 ```
