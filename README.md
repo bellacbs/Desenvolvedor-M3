@@ -65,7 +65,7 @@ Foi observado comportamento inesperado ao carregar arquivo css no Chrome, ligado
 Percebi que o erro não ocorre em outros navegadores e também quando se utiliza outras bibliotecas como http-server.
 Provavelmente, em resumo há uma incompatibilidade entre o chrome e o browser-sync nas versões das quais testei.
 
-<b>Caso utilize o Chrome, entrar no arquivo main.scss e salvar (ctrl + s)</b>
+Caso utilize o Chrome, entrar no arquivo main.scss e salvar (ctrl + s)
 
 ou
 
