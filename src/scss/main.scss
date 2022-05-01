@@ -79,10 +79,14 @@ main{
 #filter-container-mobile{
     display: none;
 }
-.checkbox-container{
+.checkbox-container-web{
     display: flex;
     flex-direction: column;
     margin: 10px 0 10px 0;
+}
+
+.checkbox-container-mobile{
+    display: none;
 }
 
 .checkbox{
@@ -238,7 +242,7 @@ footer{
 @media screen and (min-device-width : 320px) and (max-device-width : 800px) {
     main{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 60px 60px 1fr;
+        grid-template-rows: 60px 0.05fr 1fr;
     }
 
     #shirt-title{
@@ -275,6 +279,28 @@ footer{
     //filter
     #filter-container-web{
         display: none;
+    }
+
+    //filter-color
+    .checkbox-container-web{
+        display: none;
+    }
+    .checkbox-container-mobile{
+        display: inline;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0 10px 0;
+        z-index: 1;
+    }
+
+    //filter-size
+    #size-container-web{
+        display: none;
+    }
+
+    .size-container-mobile{
+        display: flex;
+        flex-wrap: wrap;
     }
 
     //orderBy

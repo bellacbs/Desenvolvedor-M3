@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { priceFilter } from '../../constants/priceFilter';
 import EmptyBox from '../checks/EmptyBox';
 import FullBox from '../checks/FullBox';
+import UpArrow from '../arrows/UpArrow';
+import DownArrow from '../arrows/DownArrow';
+import onClickShowFilter from '../../utils/onClickShowFilter';
 
 const PriceFilter = ({ clicked, setClicked, prices, setPrices }) => {
+    const [showPriceFilter, setShowPriceFilter] = useState(false)
 
     const allPriceFilter = priceFilter.map((price, index) => {
         return (
@@ -34,10 +38,19 @@ const PriceFilter = ({ clicked, setClicked, prices, setPrices }) => {
     })
 
     return (
-        <div className="checkbox-container">
-            <p>FAIXA DE PREÇO</p>
-            {allPriceFilter}
-        </div>
+        <>
+            <div className="checkbox-container-web">
+                <p>FAIXA DE PREÇO</p>
+                {allPriceFilter}
+            </div>
+            <div className="checkbox-container-mobile">
+                <div onClick={() => onClickShowFilter(showPriceFilter, setShowPriceFilter, clicked, setClicked)}>
+                    <span>FAIXA DE PREÇO{showPriceFilter ? <DownArrow /> : <UpArrow />}</span>
+                </div>
+
+                {showPriceFilter && <>{allPriceFilter}</>}
+            </div>
+        </>
     )
 
 }

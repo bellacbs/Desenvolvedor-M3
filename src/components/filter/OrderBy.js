@@ -5,7 +5,6 @@ const OrderBy = ({ clicked, setClicked, setOrder }) => {
     const [showOrderBy, setShowOrderBy] = useState(false)
 
     const onClickHandleOrder = (event) => {
-        console.log(event.target)
         setOrder(event.target.value)
         setClicked(!clicked)
     }
@@ -14,8 +13,6 @@ const OrderBy = ({ clicked, setClicked, setOrder }) => {
         setOrder(order)
         setClicked(!clicked)
     }
-
-
 
     const onClickShowOrderBy = () => {
         setShowOrderBy(!showOrderBy)

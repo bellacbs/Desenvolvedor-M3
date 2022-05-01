@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { colorsFilter } from '../../constants/colorsFilter';
 import EmptyBox from '../checks/EmptyBox';
 import FullBox from '../checks/FullBox';
+import UpArrow from '../arrows/UpArrow';
+import DownArrow from '../arrows/DownArrow';
+import onClickShowFilter from '../../utils/onClickShowFilter';
 
 const ColorFilter = ({ clicked, setClicked, color, setColors }) => {
+    const [showColorFilter, setShowColorFilter] = useState(false)
+    const [showPriceFilter, setShowPriceFilter] = useState(false)
 
     const allColorFilter = colorsFilter.map((colorFilter, index) => {
         return (
@@ -33,10 +38,20 @@ const ColorFilter = ({ clicked, setClicked, color, setColors }) => {
     })
 
     return (
-        <div className="checkbox-container">
-            <p>CORES</p>
-            {allColorFilter}
-        </div>
+        <>
+            <div className="checkbox-container-web">
+                <p>CORES</p>
+                {allColorFilter}
+            </div>
+
+            <div className="checkbox-container-mobile">
+                <div onClick={() => onClickShowFilter(showColorFilter, setShowColorFilter, clicked, setClicked)}>
+                    <span>CORES {showColorFilter ? <DownArrow /> : <UpArrow />}</span>
+                </div>
+
+                {showColorFilter && <>{allColorFilter}</>}
+            </div>
+        </>
     )
 
 }
