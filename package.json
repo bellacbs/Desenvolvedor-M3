@@ -7,7 +7,8 @@
     "start": "npm-run-all --parallel dev server",
     "dev": "gulp",
     "server": "json-server ./db.json --port 5000",
-    "webpack": "webpack serve --config ./webpack.config.js --mode development"
+    "webpack": "webpack serve --config ./webpack.config.js --mode development",
+    "build": "react-scripts build"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,8 @@
     "sass": "^1.43.4",
     "webpack": "^5.62.1",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.8.1"
+    "webpack-dev-server": "^4.8.1",
+    "react-scripts": "4.0.3"
   },
   "dependencies": {
     "@babel/core": "^7.17.2",
@@ -41,5 +43,17 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hot-loader": "^4.13.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
