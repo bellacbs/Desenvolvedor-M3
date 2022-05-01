@@ -11,7 +11,6 @@ const Filter = ({ clicked, setClicked, color, setColors, sizes, setSizes, prices
         setColors([])
         setSizes([])
         setPrices([])
-        setOrder([])
         setClicked(!clicked)
     }
 

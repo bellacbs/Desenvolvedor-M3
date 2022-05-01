@@ -5,7 +5,6 @@ export const getData = (setData) => {
     fetch(base_url)
         .then((response) => {
             if (response.ok) {
-                console.log(response.clone().json())
                 return response.clone().json()
             }
             throw response
@@ -14,8 +13,7 @@ export const getData = (setData) => {
             setData(data)
         })
         .catch((error) => {
-            console.log(error)
-            alert("Ocorreu um erro, tente novamente")
+            alert(error, "Tente novamente")
         })
 
 }

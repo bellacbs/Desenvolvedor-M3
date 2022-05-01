@@ -63,6 +63,8 @@ $ npm run start
 
 Caso utilize o Chrome, entrar no arquivo main.scss e salvar (ctrl + s)
 
+Caso apareça no navegador Cannot GET/, aguardar um tempo e rodar novamente
+
 ```
 
 <h2 id="observacoes">:pencil: Observações</h2>

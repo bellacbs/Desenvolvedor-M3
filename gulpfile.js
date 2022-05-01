@@ -1,5 +1,4 @@
 const path = require("path");
-
 const { series, src, dest, parallel, watch } = require("gulp");
 const webpack = require("webpack");
 const del = require("del");
