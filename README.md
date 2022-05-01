@@ -5,7 +5,7 @@
   <a href="#sobre">Sobre</a> &#xa0; | &#xa0; 
   <a href="#tecnologias">Tecnologias e linguagens</a> &#xa0; | &#xa0; 
   <a href="#funciona">O que funciona</a> &#xa0; | &#xa0;
-  <a href="#pendente">Pendências</a> &#xa0; | &#xa0;
+  <a href="#pendente">Em Desenvolvimento</a> &#xa0; | &#xa0;
   <a href="#requisitos">Pré requisitos</a> &#xa0; | &#xa0;
   <a href="#observacoes">Observações</a> &#xa0; | &#xa0;
   <a href="#desenvolvedores">Desenvolvedores</a>
