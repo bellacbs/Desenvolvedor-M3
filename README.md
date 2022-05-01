@@ -34,6 +34,15 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * Carregar mais produtos
 * Responsividade
 
+<h2 id="nao-funciona">:x: O que não funciona</h2>
+
+* Ordenação funciona no Chrome, porém não funciona no mozzila
+* Foi observado comportamento inesperado ao carregar arquivo css no Chrome, ligado à biblioteca browser-sync.
+Percebi que o erro não ocorre em outros navegadores e também quando se utiliza outras bibliotecas como http-server.
+Provavelmente, em resumo há uma incompatibilidade entre o chrome e o browser-sync nas versões das quais testei.
+
+    Caso utilize o Chrome, entrar no arquivo main.scss e salvar (ctrl + s), após o ```npm start```
+
  
 <h2 id="pendente">:construction: Em desenvolvimento</h2>
 
