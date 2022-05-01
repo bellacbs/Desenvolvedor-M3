@@ -7,8 +7,7 @@
     "start": "npm-run-all --parallel dev server",
     "dev": "gulp",
     "server": "json-server ./db.json --port 5000",
-    "webpack": "webpack serve --config ./webpack.config.js --mode development",
-    "build": "react-scripts build"
+    "webpack": "webpack serve --config ./webpack.config.js --mode development"
   },
   "repository": {
     "type": "git",

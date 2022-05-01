@@ -5,14 +5,16 @@ export const getData = (setData) => {
     fetch(base_url)
         .then((response) => {
             if (response.ok) {
-                return response.json()
+                console.log(response.clone().json())
+                return response.clone().json()
             }
             throw response
         })
         .then((data) => {
             setData(data)
         })
-        .catch(() => {
+        .catch((error) => {
+            console.log(error)
             alert("Ocorreu um erro, tente novamente")
         })
 

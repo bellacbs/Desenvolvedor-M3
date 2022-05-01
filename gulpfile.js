@@ -24,7 +24,7 @@ const paths = {
   html: {
     src: "src/index.html",
   },
-  dest: "/dist",
+  dest: "dist",
   temp: ".tmp",
 };
 
