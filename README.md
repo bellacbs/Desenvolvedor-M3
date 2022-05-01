@@ -39,7 +39,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [ ] Melhoria na estilização
 - [ ] Criar página de carrinho
-- [ ] Corrigir Bug ao rodar projeto pelo Chrome, pois no Chrome a estilização só atualiza se salvar o arquivo main.scss
+- [ ] Corrigir Bug ao rodar projeto pelo Chrome, pois no Chrome a estilização só atualiza se salvar o arquivo main.scss (ctrl + s)
 
 
 <h2 id="requisitos">:leftwards_arrow_with_hook: Pré-requisitos</h2>
