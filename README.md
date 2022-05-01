@@ -63,6 +63,11 @@ $ npm run start
 
 Caso utilize o Chrome, entrar no arquivo main.scss e salvar (ctrl + s)
 
+ou
+
+instalar http-server global $npm install -g http-server e rodar com $http-server e rodar na porta indicada
+
+
 ```
 
 <h2 id="observacoes">:pencil: Observações</h2>
