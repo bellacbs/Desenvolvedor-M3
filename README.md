@@ -77,7 +77,6 @@ Provavelmente, em resumo há uma incompatibilidade entre o chrome e o browser-sy
 
 Caso utilize o Chrome, entrar no arquivo main.scss e salvar (ctrl + s)
 
-=======
 ou
 
 instalar http-server global
@@ -95,7 +94,7 @@ e abrir na porta indicada
 
 <h2 id="observacoes">:pencil: Observações</h2>
 
-link do projeto [github.com/agenciam3/Desenvolvedor-M3](https://github.com/agenciam3/Desenvolvedor-M3)
+link da proposta do desafio [github.com/agenciam3/Desenvolvedor-M3](https://github.com/agenciam3/Desenvolvedor-M3)
 
 
 <h2 id="desenvolvedores">:construction_worker: Desenvolvedora</h2>
