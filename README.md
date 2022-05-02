@@ -26,6 +26,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 * API
 * ReactJS
 * Gulp
+* Webpack
 
 
 <h2 id="funciona">:heavy_check_mark: O que funciona</h2>
